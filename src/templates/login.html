@@ -1,0 +1,42 @@
+<div class="ui two column middle aligned relaxed grid basic segment top_bottom_margin">
+    <div class="column">
+        <form class="ui form segment" ng-submit="login()" name="loginForm">
+            <div class="field" data-ng-class="{error:loginForm.userName.$error.required}">
+                <label>Username</label>
+                <div class="ui left labeled icon input">
+                    <input type="text" placeholder="Username" name="userName" data-ng-model="username" required>
+                    <i class="user icon"></i>
+                    <div class="ui corner label">
+                        <i class="asterisk icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <div class="ui left labeled icon input">
+                    <input type="password" data-ng-model="password" required>
+                    <i class="lock icon"></i>
+                    <div class="ui corner label">
+                        <i class="asterisk icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="inline field">
+                <div class="ui checkbox">
+                    <input type="checkbox" id="remember_me" data-ng-model="rememberme">
+                    <label for="remember_me">Remember me</label>
+                </div>
+            </div>
+            <input type="submit" value="Login" class="ui blue submit button" data-ng-class="{disabled: loginForm.$invalid}">
+        </form>
+    </div>
+    <div class="ui vertical divider">
+        Or
+    </div>
+    <div class="center aligned column">
+        <div class="huge green ui labeled icon button" ng-click="goToSignUp()">
+            <i class="signup icon"></i>
+            Sign Up
+        </div>
+    </div>
+</div>
