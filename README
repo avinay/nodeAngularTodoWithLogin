@@ -1,6 +1,6 @@
 ## Introduction ##
 
-AppBakerZ AngularJS boilerplate for fast development.
+This is Todo App with login system that i created using AngularJS, jQuery, NodeJS, MongoDB, 
 
 ## Demo ##
-Check the Demo at [appbakerz-angular.herokuapp.com](https://appbakerz-angular.herokuapp.com/)
+Check the Demo at [furqankhanzada-node-angular-todo-with-login.herokuapp.com](https://furqankhanzada-node-angular-todo-with-login.herokuapp.com/)
