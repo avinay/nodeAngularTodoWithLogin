@@ -1,7 +1,8 @@
 'use strict';
 
 myApp.controller(
-    'homeCtrl', ['$scope', 'my_services' ,function($scope, my_services){
+    'homeCtrl', ['$scope', 'my_services', '$rootScope' ,function($scope, my_services, $rootScope){
+    console.log($rootScope)
     $scope.service = function(){
         return  my_services.myFirstService();
     };

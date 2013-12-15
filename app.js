@@ -5,7 +5,6 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var passport = require('passport');
@@ -44,15 +43,7 @@ passport.deserializeUser(User.deserializeUser);
 mongoose.connect('localhost', 'node-angular-login');
 var db = mongoose.connection;
 
-// User Schema
-var userSchema = mongoose.Schema({
-    username: { type: String, required: true, unique: true },
-    email: { type: String, required: true, unique: true },
-    password: { type: String, required: true}
-});
-
 db.on('error', console.error.bind(console, 'connection error:'));
-
 db.once('open', function callback() {
 
     // checking is db connected

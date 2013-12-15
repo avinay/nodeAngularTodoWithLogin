@@ -48,8 +48,23 @@ var routes = [
     {
         path: '/profile',
         httpMethod: 'GET',
-        middleware: [function(req, res){
-            res.render('index', { title: 'Express' });
+        middleware: [function(req, res) {
+            var role = userRoles.user, username = '', firstName = '', lastName = '', email = '';
+            if(req.user) {
+                role = req.user.role;
+                username = req.user.username;
+                firstName = req.user.firstName;
+                lastName = req.user.latName;
+                email = req.user.email;
+            }
+            res.cookie('user', JSON.stringify({
+                'username': username,
+                'role': role,
+                'firstName' : firstName,
+                'lastName' : lastName,
+                'email' : email
+            }));
+            res.render('index');
         }]
     },
 
@@ -76,14 +91,18 @@ var routes = [
         path: '/',
         httpMethod: 'GET',
         middleware: [function(req, res) {
-            var role = userRoles.public, username = '';
+            var role = userRoles.public, username = '', firstName = '', lastName = '';
             if(req.user) {
                 role = req.user.role;
                 username = req.user.username;
+                firstName = req.user.firstName;
+                lastName = req.user.latName;
             }
             res.cookie('user', JSON.stringify({
                 'username': username,
-                'role': role
+                'role': role,
+                'firstName' : firstName,
+                'lastName' : lastName
             }));
             res.render('index');
         }]

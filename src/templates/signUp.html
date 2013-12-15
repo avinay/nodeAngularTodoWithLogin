@@ -4,7 +4,7 @@
             <div class="field">
                 <label>First Name</label>
                 <div class="ui left labeled icon input">
-                    <input type="text" placeholder="Jhon">
+                    <input type="text" name="first_name" placeholder="Jhon" data-ng-model="first_name">
                     <i class="user icon"></i>
                     <div class="ui corner label">
                         <i class="asterisk icon"></i>
@@ -14,7 +14,7 @@
             <div class="field">
                 <label>Last Name</label>
                 <div class="ui labeled icon input">
-                    <input type="text" placeholder="Smit">
+                    <input type="text" name="last_name" placeholder="Smit" data-ng-model="last_name">
                     <div class="ui corner label">
                         <i class="asterisk icon"></i>
                     </div>
@@ -23,7 +23,7 @@
             <div class="field">
                 <label>Username</label>
                 <div class="ui left labeled icon input">
-                    <input type="text" placeholder="Username">
+                    <input type="text" name="username" placeholder="Username" data-ng-model="username">
                     <i class="user icon"></i>
                     <div class="ui corner label">
                         <i class="asterisk icon"></i>
@@ -33,7 +33,7 @@
             <div class="field">
                 <label>Email</label>
                 <div class="ui left labeled icon input">
-                    <input type="text" placeholder="Email">
+                    <input type="text" name="email" placeholder="Email" data-ng-model="email">
                     <i class="mail icon"></i>
                     <div class="ui corner label">
                         <i class="asterisk icon"></i>
@@ -43,14 +43,14 @@
             <div class="field">
                 <label>Password</label>
                 <div class="ui left labeled icon input">
-                    <input type="password">
+                    <input type="password" name="password" data-ng-model="password">
                     <i class="lock icon"></i>
                     <div class="ui corner label">
                         <i class="asterisk icon"></i>
                     </div>
                 </div>
             </div>
-            <div class="ui blue submit button">Sign Up</div>
+            <div class="ui blue submit button" ng-click="register()">Sign Up</div>
         </div>
     </div>
     <div class="ui vertical divider">

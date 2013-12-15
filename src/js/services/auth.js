@@ -4,12 +4,12 @@ myApp.factory('Auth', function($http, $cookieStore){
 
         var accessLevels = routingConfig.accessLevels
             , userRoles = routingConfig.userRoles
-            , currentUser = $cookieStore.get('user') || { username: 'Furqan', role: userRoles.public };
+            , currentUser = $cookieStore.get('user') || { username: '', role: userRoles.public };
 
         $cookieStore.remove('user');
 
         function changeUser(user) {
-            _.extend(currentUser, user);
+            angular.extend(currentUser, user);
         };
 
         return {
