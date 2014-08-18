@@ -40,7 +40,7 @@ passport.deserializeUser(User.deserializeUser);
 
 
 
-mongoose.connect('localhost', 'node-angular-login');
+mongoose.connect('mongodb://node-angular-todo-with-login:node-angular-todo-with-login@ds055709.mongolab.com:55709/node-angular-todo-with-login');
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
