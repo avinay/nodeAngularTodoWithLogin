@@ -7,7 +7,11 @@
     },
     "dependencies": {
         "ejs": "^1.0.0",
+<<<<<<< HEAD
         "express": "^4.8.4",
+=======
+        "express": "3.0.0",
+>>>>>>> de99124f5587e3b321d28d16afd95c96051329ab
         "mongoose": "^3.8.15",
         "passport": "^0.2.0",
         "passport-facebook": "^1.0.3",
